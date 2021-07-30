@@ -1,0 +1,45 @@
+<body><body></body><form #f=ngForm (ngSubmit)="save(f)">
+  <div class="col-md-6">
+    <div class="card card-body">
+      <h3 class="card-title mt-0">Movie Info</h3>
+      <hr>
+
+      <div class="form-group">
+        <label>Title</label>
+        <input [(ngModel)]="m.title" ngModel class="form-control" type="text" id="title" name="title">
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea [(ngModel)]="m.description" ngModel  type="text" name="description" class="form-control" id="textAreaExample1" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Genres</label>
+        <input [(ngModel)]="m.genre" ngModel class="form-control" type="text" value="" id="genres" name="genre">
+      </div>
+
+      <div class="form-group">
+        <label>Release Date</label>
+        <div class="input-group date" data-target-input="nearest">
+          <input [(ngModel)]="m.date" ngModel name="date" type="text" id="release_date"
+            class="form-control datetimepicker-input" data-target="#release_date" placeholder="YYYY-MM-DD">
+          <div class="input-group-append" data-target="#release_date" data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Trailer URL</label>
+        <input [(ngModel)]="m.url" ngModel name="url" class="form-control" type="text" value=""
+          id="trailler_youtube_source">
+      </div>
+    </div>
+  </div>
+  <button  type="submit" class="btn btn-success"> ADD Movie </button>
+
+</form>
+
+
+</body>
